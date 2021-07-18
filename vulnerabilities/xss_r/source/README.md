@@ -38,4 +38,15 @@ The point is developers will have to declare a list of possible malicious inputs
 ## High level
 
 ### Explaination
+   
+Check out **source code** below:
+  
+![image](https://user-images.githubusercontent.com/56772435/126079439-a7bcd9ba-950e-459e-8111-e49e0ae6a74e.png)
+
+There is a function called [preg_replace()](https://www.php.net/manual/en/function.preg-replace.php) which is used to perform a regular expression search and replace.
+  
+$name = preg_replace( '/<(.*)s(.*)c(.*)r(.*)i(.*)p(.*)t/i', '', $_GET[ 'name' ] );
+  
+In this case, it will perform a regular expression search to detect **<script>** tag and replaces everything inside the tag by NULL. The problem is developer is supposed to be skillful in regex and there is much more than just a **<script>** tag.
+  
 ---
