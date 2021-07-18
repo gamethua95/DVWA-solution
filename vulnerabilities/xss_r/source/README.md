@@ -30,6 +30,8 @@ In this case, it replaces **<script>** by **NULL** so any input like this **<scr
 ![image](https://user-images.githubusercontent.com/56772435/126078840-dd2f9720-e6fa-4685-9f8f-da832ba7c908.png)
 
 The point is developers will have to declare a list of possible malicious inputs which is obviously not a wise thing to do. So, attacker just need to supply an unexpected input to get scripts run such as, <SCRIPT>, <SCript> or any other HTML tags. 
+  
+![image](https://user-images.githubusercontent.com/56772435/126079244-370e307a-173d-4500-85da-d1c1e8f2dd54.png)
 
 ---
 
