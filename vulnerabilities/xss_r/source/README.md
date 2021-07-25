@@ -50,3 +50,5 @@ $name = preg_replace( '/<(.*)s(.*)c(.*)r(.*)i(.*)p(.*)t/i', '', $_GET[ 'name' ] 
 In this case, it will perform a regular expression search to detect **<script>** tag and replaces everything inside the tag by NULL. The problem is developer is supposed to be skillful in regex and there is much more than just a **<script>** tag.
   
 ---
+
+## For Remediation, Read **prevention_high.php**  
