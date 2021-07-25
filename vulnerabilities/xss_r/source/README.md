@@ -51,4 +51,4 @@ In this case, it will perform a regular expression search to detect **<script>**
   
 ---
 
-## For Remediation, Read **prevention_high.php**  
+## FOR MEMEDIATION, PLEASE READ prevention_high.php
