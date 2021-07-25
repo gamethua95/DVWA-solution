@@ -51,4 +51,4 @@ In this case, it will perform a regular expression search to detect **<script>**
   
 ---
 
-## FOR MEMEDIATION, PLEASE READ prevention_high.php
+## FOR MEMEDIATION, PLEASE READ [prevention_high.php](https://github.com/gamethua95/DVWA-solution/blob/main/vulnerabilities/xss_r/source/prevention_high.php)
