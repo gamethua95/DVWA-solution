@@ -1,13 +1,13 @@
 <?php
 
-header ("X-XSS-Protection: 0");
-//header("Content-Security-Policy: default-src 'self'");
+header ("X-XSS-Protection: 1");
+header("Content-Security-Policy: default-src 'self'");
 
 // Is there any input?
 if( array_key_exists( "name", $_GET ) && $_GET[ 'name' ] != NULL ) {
 	// Get input
 	$name = preg_replace( '/<(.*)s(.*)c(.*)r(.*)i(.*)p(.*)t/i', '', $_GET[ 'name' ] );
-	//$sname = htmlspecialchars(strip_tags($name), ENT_QUOTES, 'UTF-8');
+	$sname = htmlspecialchars(strip_tags($name), ENT_QUOTES, 'UTF-8');
 	//$sname = filter_var($name, FILTER_SANITIZE_STRING);
 	/*		function jsEscape($str) {
 			  $output = '';
@@ -121,7 +121,7 @@ if( array_key_exists( "name", $_GET ) && $_GET[ 'name' ] != NULL ) {
 		This policy specifies that resources such as images and scripts can only be loaded from the same origin as the main page. So even if an attacker can successfully inject an XSS payload they can only load resources from the current origin. This greatly reduces the chance that an attacker can exploit the XSS vulnerability.
 */		
 	// Feedback for end user
-	$html .= "<pre>Hello ${name}</pre>";
+	$html .= "<pre>Hello ${sname}</pre>";
 	//$html .= "<pre>Hello ${sname}</pre>";
 
 }
